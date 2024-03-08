@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  line-bot:
+    container_name: line_bot_server
+    # environment:
+    volumes:
+      - /usr/src/app
+    command: python bot_line.py
+    build:
+      context: .
+
+    restart: "always"
